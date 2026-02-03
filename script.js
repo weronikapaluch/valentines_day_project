@@ -17,7 +17,7 @@ envelope.addEventListener("click", () =>{
 
     setTimeout( () => {
         document.querySelector(".letter-width").classList.add("open");
-    }, 50):
+    }, 50);
 });
 
 // Logic to make YES btn to grow
