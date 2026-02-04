@@ -7,7 +7,7 @@ const yesBtn = document.getElementById(".btn[alt='Yes']");
 const title = document.getElementById("letter-title");
 const catImg = document.getElementById("letter-cat");
 const buttons = document.getElementById("letter-buttons");
-const finalText = dosument.getElementById("final-text");
+const finalText = document.getElementById("final-text");
 
 // Click Envelope
 
@@ -17,7 +17,7 @@ envelope.addEventListener("click", () =>{
 
     setTimeout( () => {
         document.querySelector(".letter-width").classList.add("open");
-    }, 50);
+    },50);
 });
 
 // Logic to make YES btn to grow
@@ -31,7 +31,7 @@ yesBtn.style.transition = "transform 0.3s ease";
 noBtn.addEventListener("click", () => {
     yesScale += 2;
 
-    if (yesBtn.style.position != fixed) {
+    if (yesBtn.style.position != "fixed") {
         yesBtn.style.position = "fixed";
         yesBtn.style.top = "50%";
         yesBtn.style.transform = `translate(-50%, -50%) scale(${yesScale})`;
