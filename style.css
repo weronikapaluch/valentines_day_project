@@ -40,7 +40,7 @@ body{
     align-items: center;
 }
 
-.letter-width{
+.letter-window{
     width: 90vw;
     max-width: 800px;
     aspect-ratio: 3/2;
@@ -50,7 +50,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(window.png);
+    background-image: url("window.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -60,10 +60,10 @@ body{
 
     transform: scale(1.2);
     opacity: 0;
-    transition: transform 0.6s ease, opacity 0.6s ease
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-.letter-window.open{
+.letter-window.open {
     transform: scale(1);
     opacity: 1;
 }
