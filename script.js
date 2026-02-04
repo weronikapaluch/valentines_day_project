@@ -2,7 +2,7 @@
 const envelope = document.getElementById("envelope-container");
 const letter = document.getElementById("letter-container");
 const noBtn = document.getElementById(".no-btn");
-const yestBtn = document.getElementById(".btn[alt='Yes']");
+const yesBtn = document.getElementById(".btn[alt='Yes']");
 
 const title = document.getElementById("letter-title");
 const catImg = document.getElementById("letter-cat");
@@ -24,6 +24,32 @@ envelope.addEventListener("click", () =>{
 
 let yesScale = 1;
 
-yestBtn.style.position = "relative"
-yestBtn.style.transformOrigin = "center center";
-yestBtn.style.transition = "transform 0.3s ease";
+yesBtn.style.position = "relative"
+yesBtn.style.transformOrigin = "center center";
+yesBtn.style.transition = "transform 0.3s ease";
+
+noBtn.addEventListener("click", () => {
+    yesScale += 2;
+
+    if (yesBtn.style.position != fixed) {
+        yesBtn.style.position = "fixed";
+        yesBtn.style.top = "50%";
+        yesBtn.style.transform = `translate(-50%, -50%) scale(${yesScale})`;
+    }else{    
+        yesBtn.style.transform = `translate(-50%, -50%) scale(${yesScale})`;
+    }
+});
+
+// YES is clicked
+
+yesBtn.addEventListener("click", () =>{
+    title.textContent = "Yippeeee!";
+
+    catImg.src = "car_dance.gif";
+
+    document.querySelector(".letter-window").classList.add("final");
+
+    buttons.style.display = "none";
+
+    finalText.style.display = "block"
+});
